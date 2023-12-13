@@ -14,13 +14,19 @@ body {
   color: #fff;
 }
 
-.a {
+.results{
   padding: 10px;
   text-align: left;
-  background: #450780;
   color: #fff;
   text-decoration: none;
 }
+
+.timer {
+  padding: 10px;
+  text-align: right;
+  color: #fff;
+}
+
 
 button {
   font-size: large;

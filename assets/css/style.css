@@ -14,7 +14,7 @@ body {
   color: #fff;
 }
 
-.results{
+.start{
   padding: 10px;
   text-align: left;
   color: #fff;
@@ -37,4 +37,29 @@ button {
   border-style: initial;
   border-radius: 3px;
   padding: 5px;
+}
+
+.answers {
+  margin-bottom: 20px;
+}
+
+#submit {
+  font-size: large;
+  color: black;
+  background-color: rgb(255, 238, 244);
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#submit:hover{
+  background-color: orange;
+  color: white;
+}
+
+#start:hover{
+  background-color: orange;
+  color: #fff;
 }

@@ -1,13 +1,34 @@
-
-
-
-
-
 header {
-    padding: 20px;
-    text-align: center;
-    background: #450780;
-    color: #fff;
-    border-bottom:30px #d15776;
-  }
-  
+  padding: 20px;
+  text-align: center;
+  background: #450780;
+  color: #fff;
+}
+
+body {
+  text-align: center;
+  padding: 20px;
+  background-color: palevioletred;
+  border-style: double;
+  border-color: #fff;
+  color: #fff;
+}
+
+.a {
+  padding: 10px;
+  text-align: left;
+  background: #450780;
+  color: #fff;
+  text-decoration: none;
+}
+
+button {
+  font-size: large;
+  cursor: pointer;
+  background-color: rgb(230, 230, 230);
+  color: black;
+  border: 3px;
+  border-style: initial;
+  border-radius: 3px;
+  padding: 5px;
+}

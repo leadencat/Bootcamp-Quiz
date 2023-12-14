@@ -43,6 +43,23 @@ button {
   margin-bottom: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
+.questionScreen {
+  display: block;
+  margin: 8rem auto 0 auto;
+  max-width: 800px;
+}
+
+.scoreScreen {
+  text-align: center;
+  max-width: 800px;
+  display: block;
+  margin: 10px;
+}
+
 #submit {
   font-size: large;
   color: black;
@@ -59,7 +76,7 @@ button {
   color: white;
 }
 
-#start:hover{
+#startButton:hover{
   background-color: orange;
   color: #fff;
 }

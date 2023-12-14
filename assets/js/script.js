@@ -44,25 +44,21 @@ var questions = [
 ];
 
 startButton.addEventListener('click', function() {
-    var timer = setInterval(setTime, 1000);
-    timeEl.textContent = seconds;
+    timeLeftEl.textContent = seconds;
     startScreen.setAttribute('class', 'hidden');
     questionEl.removeAttribute('class');
     displayQ();
 });
 
-function setTime() {
-    seconds--;
-    timeEl.textContent = seconds;
+// timer countdown function
+function timerCountdown() {
+    time--;
+    timeLeftEl.textContent = time;
 
     if (seconds <= 0) {
-        endPage();
+        scoreScreen();
     }
 }
-
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
-function showQuestions(questions, quizContainer){
-
 var output = [];
 var answers;
 
@@ -85,8 +81,6 @@ for(var i=0; i<questions.length; i++){
 	}
 
 	quizContainer.innerHTML = output.join('');
-}
-    }
 
 function showResults(questions, quizContainer, resultsContainer) {
 var answerContainers = quizContainer.querySelecterAll('.answers');

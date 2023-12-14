@@ -18,14 +18,29 @@
     <p>You will be timed while answering the following questions.
         If you answer incorectly the timer will go down.
         Good Luck!</p>
-        <button id="start">Get Started</button>
+        <button id="startButton">Get Started</button>
+        
     <main>
         <section>
-    <div id="quiz"></div>
-    <button id="submit">Get Results</button>
-    <div id="results"></div>
+    <div id="quiz" class="hidden"></div>
+    <section class="questionScreen">
+        <h2 id=questions></h2>
+        <div id="options">
+            <div id="response" class="hidden"></div>
+        </div>  
+     </section>
+
+     <div id="scoreScreen" class="hidden">
+        <section class="scoreScreen">
+            <h2>Submitted</h2>
+            <h2>Your Score: <span id="score"></span></h2>
+            <a>Save your score <br><br>Enter your name: <br></a>
+        <input type="text" id="userName" max="20"/>
+        <button id="saveScore">Save Score</button>
         </section>
+     </div>
     </main>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>

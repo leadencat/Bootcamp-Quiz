@@ -15,7 +15,7 @@ var userScore;
 var startButton = document.getElementById("startButton");
 
 // Variables used to create new "pages"
-var welcomeScreenEl = document.getElementById("welcomeScreen");
+var welcomeScreenEl = document.getElementById("startScreen");
 var questionScreenEl = document.getElementById("questionScreen");
 var scoreScreenEl = document.getElementById("scoreScreen");
 
@@ -76,7 +76,7 @@ function chooseOption(event) {
     if (time <= 0) {
       time = 0;
     }
-    
+
     responseEl.setAttribute("class", "incorrect");
     responseEl.textContent = "Incorrect!";
   } 
@@ -104,14 +104,22 @@ function scoreScreen() {
   var scoreEL = document.getElementById("results");
 }
 
-submitButton.onclick = function () {
-  showResults(questions, quizContainer, resultsContainer);
-};
+function saveScore() {
+    // Save the user's name that they input
+    var userNameEl = document.getElementById("userName");
+    var userName = userNameEl.value;
+    var scores = JSON.parse(window.localStorage.getItem("scores")) || [];
+    var userInfo = {
+        userName: userName,
+        userScore: userScore,
+    };
 
-submitButton.onclick = function () {
-  showResults(questions, quizContainer, resultsContainer);
-};
+    // Push the user's info into the scores key within localStorage
+    scores.push(userInfo);
+    window.localStorage.setItem("scores", JSON.stringify(scores));
 
+    highScoreScreen();
+}
 var questions = [
   {
     question: "Which of the following elements is not an html element?",

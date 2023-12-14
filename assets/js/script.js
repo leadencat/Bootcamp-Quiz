@@ -1,6 +1,20 @@
+
+// page elements
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
+// global variables
+var time = 90;
+var questionNumber = 0;
+var timeVar;
+var questionsCorrect = 0;
+var userScore;
+// Variables used to create new "pages"
+var welcomeScreenEl = document.getElementById("welcomeScreen");
+var questionScreenEl = document.getElementById("questionScreen");
+//event listeners
+startButton.addEventListener("click", startQuiz);
+
 
 var questions = [
     {
